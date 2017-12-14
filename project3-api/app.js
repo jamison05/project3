@@ -41,14 +41,17 @@ app.use(passport.session());
 
 
 // ROUTERS ---------------------------------------------------------------------
-
-const fishdispApi = require('./routes/fishdisplay-api-router');
-app.use('/api', fishdispApi);
   // all routes in this router will get an extra "/api" in the URL
-  // (For example "/phones" becomes "/api/phones")
 
 const userApi = require('./routes/user-api-router');
 app.use('/api', userApi);
+
+const fishdispApi = require('./routes/fishdisplay-api-router');
+app.use('/api', fishdispApi);
+
+
+const commercefishApi = require('./routes/commerce-fish-router');
+app.use('/api', commercefishApi);
 
 // END ROUTERS -----------------------------------------------------------------
 

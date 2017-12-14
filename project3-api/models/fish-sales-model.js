@@ -1,27 +1,28 @@
 const mongoose = require("mongoose");
 
-
 const Schema = mongoose.Schema;
 
 
-const userSchema = new Schema(
+const saleSchema = new Schema(
   {
       cost: {
           type: Number,
           required: [true, 'Please set a price.']
       },
       availability: {
-          type: Number,
-          required: [false, '']
-      },
-      ranking: {
           type: String,
-          required: [false, '']
+          required: [false, 'Give avaiaibility']
       },
       captiveBreeding: {
           type: Boolean,
-          required: [false, 'Encrypted password is empty']
+          required: [false, 'Can the fish breed in captivity?']
+      },
+      fish: {
+      type:  String,
+      required: [true, "Fish"]
       }
+
+
   },
 
   {
@@ -29,7 +30,7 @@ const userSchema = new Schema(
   }
 );
 
-const User = mongoose.model("UserFishSite", userSchema);
+const sale_model = mongoose.model("saleFishSite", saleSchema);
 
 
-module.exports = User;
+module.exports = sale_model;

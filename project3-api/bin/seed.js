@@ -7,7 +7,7 @@ const FishItems = require("../models/fishdisplay-model");
 
 const fishList = [
     {
-        commonname: 'Cuban cichlids',
+        commonname: 'Cuban cichlid',
         sci_name: 'Nandopsis tetracanthis',
         images:['http://z5.ifrm.com/5900/99/0/p1009542/1.jpg'],
         currentSize: "3",
@@ -15,11 +15,10 @@ const fishList = [
         tempermant: "aggressive",
         waterpreference: "normal-hardness",
         locations: [
-          'Cuba'
-        ]
+          'Cuba']
     },
     {
-      commonname: 'Cuban cichlids',
+      commonname: 'Cuban cichlid',
       sci_name: 'Nandopsis tetracanthis',
       images:['http://z5.ifrm.com/5900/99/0/p1009542/1.jpg'],
       currentSize: "3",
@@ -27,8 +26,7 @@ const fishList = [
       tempermant: "aggressive",
       waterpreference: "normal-hardness",
       locations: [
-        'Cuba'
-      ]
+        'Cuba']
     }
 ];//Ending bracket
 
