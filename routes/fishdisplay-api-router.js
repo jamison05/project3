@@ -70,6 +70,7 @@ router.post("/displayfish", (req, res, next) => {
 router.get("/displayfish/:id", (req, res, next) => {
     if (req.user === undefined) {
         res.status(400).json({ error: "Not logged in" });
+        alert("You have to be login to view detail and buy fish.");
         return;
     }
 
@@ -78,7 +79,7 @@ router.get("/displayfish/:id", (req, res, next) => {
           // 404 if fish doesn't exist
           if (fishFromDb === null) {
               // respond with an ERROR MESSAGE in the JSON format
-              res.status(404).json({ error: "Phone not found" });
+              res.status(404).json({ error: "Fish not found" });
           }
           else {
               // respond with the QUERY RESULTS in the JSON format
@@ -88,7 +89,6 @@ router.get("/displayfish/:id", (req, res, next) => {
       .catch((err) => {
           console.log("GET /displayfish/:id ERROR!");
           console.log(err);
-
           // respond with an ERROR MESSAGE in the JSON format
           res.status(500).json({ error: "Fish details database error" });
       });

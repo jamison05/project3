@@ -13,12 +13,17 @@ const fishBuyList = [
     fish:'Cuban cichlids'
     },
     {
-    cost:8.99,
-    availability:"more",
-    captiveBreeding:true,
-    fish:'Cuban cichlid'
+    cost:899.00,
+    availability:"limited",
+    captiveBreeding:false,
+    fish:'Zebra pike cichlid'
     },
-
+    {
+    cost:12.00,
+    availability:"more",
+    captiveBreeding:false,
+    fish:'Green Terror cichlid'
+    }
 ];//Ending bracket
 
 // cost: {
