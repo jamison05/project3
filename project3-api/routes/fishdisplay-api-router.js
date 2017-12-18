@@ -22,7 +22,7 @@ router.get("/displayfish", (req, res, next) => {
           // respond with an ERROR MESSAGE in the JSON format
           res.status(500).json({ error: "Fish list database error" });
       });
-}); // GET /phones
+}); // GET /fish
 
 
 router.post("/displayfish", (req, res, next) => {
@@ -64,7 +64,7 @@ router.post("/displayfish", (req, res, next) => {
               res.status(500).json({ error: "Phone save database error" });
           }
       });
-}); // POST /phones
+}); // POST get new fish
 
 
 router.get("/displayfish/:id", (req, res, next) => {

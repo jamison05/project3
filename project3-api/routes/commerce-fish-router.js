@@ -40,24 +40,45 @@ router.get("/displayfish/:id/commerce", (req, res, next) => {
       });
     }); // GET commerce of specific fish
 });
-//Will access the databas for transcactions. Only if the user commits
+
+router.get("/displaytransaction", (req, res, next) => {
+    Fish
+      .find()
+      .limit(25)
+      .exec()
+      .then((fdisplayResults) => {
+          // respond with the QUERY RESULTS in the JSON format
+          res.status(200).json(fdisplayResults);
+      })
+      .catch((err) => {
+          console.log("GET /display trans ERROR!");
+          console.log(err);
+
+          // respond with an ERROR MESSAGE in the JSON format
+          res.status(500).json({ error: "Fish list database error" });
+      });
+}); // GET /fish
+
+//Will access the databas for transcactions. Only if the user //commits
 //to buying the item.
-router.post("/displayfish/:id/transaction", (req, res, next) => {
+router.post("/displayfish/transaction", (req, res, next) => {
     const newTransaction = new transCommerce({
+
         username: req.body.username,
         number_ofItems: req.body.number_ofItems,
+        cost_per_item:req.body.cost_per_item,
         fish_sales_item: req.body.fish_sales_item,
-    });
 
-  newTransaction.save()
-      .then(() => {
-          // respond with the NEW PHONE in the JSON format
-          res.status(200).json(newTransaction);
-      })
+
+
+    });
+   return newTransaction.save()
+
+
       .catch((err) => {
           console.log("POST /trascaction ERROR!");
           console.log(err);
-
+          console.log(newTransaction);
           // 400 status code if validation error
           if (err.errors) {
               // respond with an VALIDATION ERRORS in the JSON format
@@ -70,24 +91,5 @@ router.post("/displayfish/:id/transaction", (req, res, next) => {
       });
 }); // POST new commerce item.
 
-// {
-//   users: {
-//   type: Schema.Types.ObjectId,
-//   required:[true, "User should be connected with this transaction."]
-//   },
-//
-//   number_ofItems:{
-//   type: Number,
-//   required:[true, "User should be connected with this transaction."]
-//   },
-//
-//   //Will obtain objects from the fish sales model for the
-//   //transcactions.
-//
-//   fish_sales_item: {
-//   type: Schema.Types.ObjectId,
-//   required:[true, "User should be connected with this transaction."]
-//   },
-//
-// },
+
 module.exports = router;

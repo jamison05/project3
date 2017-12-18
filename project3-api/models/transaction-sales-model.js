@@ -6,20 +6,23 @@ const transcSchema = new Schema(
   {
     username: {
     type: String,
-    required:[true, "User should be connected with this transaction."]
+    // required:[true, "User should be connected with this transaction."]
     },
 
     number_ofItems:{
     type: Number,
-    required:[true, "Number error."]
+    // required:[true, "Number error."]
     },
 
     //Will obtain objects from the fish sales model for the
     //transcactions.
-
+    cost_per_item: {
+    type: Number,
+    // required:[true, "Fish item can't connect with this transaction."]
+    },
     fish_sales_item: {
     type: Schema.Types.ObjectId,
-    required:[true, "Fish item can't connect with this transaction."]
+    // required:[true, "Fish item can't connect with this transaction."]
     },
 
   },
@@ -29,7 +32,7 @@ const transcSchema = new Schema(
   }
 );
 
-const transcItems = mongoose.model("FishTranscation", transcSchema);
+const transcItems = mongoose.model("FishTranscation2", transcSchema);
 
 
 module.exports = transcItems;

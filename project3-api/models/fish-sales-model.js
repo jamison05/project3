@@ -14,7 +14,7 @@ const saleSchema = new Schema(
           required: [false, 'Give avaiaibility']
       },
       captiveBreeding: {
-          type: Boolean,
+          type: String,
           required: [false, 'Can the fish breed in captivity?']
       },
       fish: {
