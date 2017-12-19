@@ -14,13 +14,13 @@ export const trivia: any[] = [
     {
       id: 3,
       question: "Which of the following would increase/maintain the coloration of your fish?",
-      answer: ["feeding your fish scrap chicken or hamburger bits", "Shining a bright light on your fish in order for it to get its own scale tan","Feeding your fish a variety nutritious live and frozen food, vegetables, nutrient enriched commericial foods(frozen or dry)"],
-      solution: "answer3"
+      answer: ["feeding your fish scrap chicken or hamburger bits", "Shining a bright light on your fish in order for it to get its own scale tan","Feeding your fish a variety of nutritious live and frozen food, vegetables, nutrient enriched commericial foods(frozen or dry)"],
+      solution: "answer3:"
     },
     {
       id: 4,
-      question: "Which fish that is commericially availablehas a transgenic gene inserted into their DNA from fluorescent jellyfish?",
+      question: "Which fish that is commericially available, has a transgenic gene inserted into their DNA from fluorescent jellyfish?",
       answer: ["electric blue jack dempsey", "neon tetras","glofish (zebra danios)"],
-      solution: "answer2: gloish (zebra danios)"
+      solution: "answer2: glofish (zebra danios)"
     }
 ];
