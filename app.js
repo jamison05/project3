@@ -46,12 +46,16 @@ app.use(passport.session());
 const userApi = require('./routes/user-api-router');
 app.use('/api', userApi);
 
+
+
+
 const fishdispApi = require('./routes/fishdisplay-api-router');
 app.use('/api', fishdispApi);
 
-
 const commercefishApi = require('./routes/commerce-fish-router');
 app.use('/api', commercefishApi);
+
+
 
 // END ROUTERS -----------------------------------------------------------------
 

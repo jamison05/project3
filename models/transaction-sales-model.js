@@ -21,7 +21,7 @@ const transcSchema = new Schema(
     // required:[true, "Fish item can't connect with this transaction."]
     },
     fish_sales_item: {
-    type: Schema.Types.ObjectId,
+    type: String,
     // required:[true, "Fish item can't connect with this transaction."]
     },
 
