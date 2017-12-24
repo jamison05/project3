@@ -69,13 +69,10 @@ router.post("/displayfish/transaction", (req, res, next) => {
         cost_per_item:req.body.cost_per_item,
         fish_sales_item: req.body.fish_sales_item,
 
-
-
     });
-   return newTransaction.save()
-
-
-      .catch((err) => {
+      newTransaction.save().then(() => {
+        res.status(200).json(newTransaction);
+        }).catch((err) => {
           console.log("POST /trascaction ERROR!");
           console.log(err);
           console.log(newTransaction);
